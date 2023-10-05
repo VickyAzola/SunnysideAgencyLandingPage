@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap');
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+h1, h2, h3, span {
+    font-family: 'Fraunces', serif;
+}
+
+.bgYellow-a {
+    background: linear-gradient(white, white, hsla(51, 100%, 49%, 0.5));
+    font-family: 'Fraunces', serif;
+}
+
+.bgRed-a {
+    background: linear-gradient(white, white, hsla(7, 99%, 70%, 0.5));
+    font-family: 'Fraunces', serif;
+}
+
+/*Menu Desktop*/
+.topMenu {
+    position: absolute;
+    right: 0;
+}
+
+.topMenu li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 767px) {
+    .topMenu li:last-child {
+        font-family: 'Fraunces', serif;
+        margin-left: 1rem;
+        background-color: white;
+        color: black;
+        padding: .7rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 5rem;
+        width: 7.5rem;
+        font-size: 1rem;
+    }
+
+    .topMenu li:last-child:hover {
+        background-color: rgba(255, 255, 255, 0.35); 
+        cursor: pointer;
+        color: white;
+    }
+}
+
+/*Menu Mobile*/
+@media screen and (max-width: 767px) {
+    .topMenu li {
+        display: none;
+    }
+    .topMenu a.menuBtn {
+        float: right;
+        display: block;
+        padding: 1.5rem;
+    }
+    /*white menu*/
+    .topMenu.responsive {
+        background-color: white;
+        height: 18.5rem;
+        width: 88%;
+        position: absolute;
+        z-index: 2;
+        inset-inline: 0;
+        margin-inline: auto;
+        top: 20%;
+        
+    }
+    /*Triangle*/
+    .topMenu.responsive div {
+        position: absolute;
+        right: 0;
+        top: -9%;
+        z-index: 2;
+        border-left: 2.1rem solid transparent;
+        border-bottom: 2rem solid white;
+    }
+    .topMenu.responsive a.menuBtn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        
+    }
+    .topMenu.responsive ul {
+        padding: 1rem;
+    }
+    .topMenu.responsive li {
+        color: #5a636c;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    .topMenu li:last-child {
+        font-family: 'Fraunces', serif;
+        background-color: #fad400;
+        color: black;
+        padding: .9rem 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 5rem;
+        width: 9rem;
+        margin-inline: auto;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+}
